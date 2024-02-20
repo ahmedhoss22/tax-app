@@ -32,7 +32,7 @@ function Footer() {
         </div>
         <div className="line2"></div>
         <div className="icons">
-          <ul className="d-flex justify-content-between">
+          {/* <ul className="d-flex justify-content-between">
             <li>
               <a href="/">
                 <i className="fab fa-facebook-square text-light fs-4"></i>
@@ -48,7 +48,7 @@ function Footer() {
                 <i className="fab fa-linkedin text-light fs-4"></i>
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </footer>

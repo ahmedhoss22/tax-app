@@ -11,7 +11,7 @@ function HomePage() {
     <>
     <HeaderMain/>
     <Years/>
-    <CardHome/>
+    {/* <CardHome/> */}
     <OurServesesHome/>
     <AboutClient/>
     <EBlog/>

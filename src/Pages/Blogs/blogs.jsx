@@ -66,7 +66,7 @@ function Blogs() {
         </div>
       )}
       <div className="text-center my-3">
-        <input
+        {/* <input
           type="search"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
@@ -80,7 +80,7 @@ function Blogs() {
           placeholder="Search...."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-        />
+        /> */}
       </div>
       <div className="d-flex justify-content-between container my-5 flex-wrap">
         {filteredBlogs?.map((blog) => (

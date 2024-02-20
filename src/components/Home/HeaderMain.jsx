@@ -1,33 +1,32 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function HeaderMian() {
+  const [t , i18n] = useTranslation()
+  console.log(i18n.language);
   return (
     <main>
       <div className="main">
         <div className="overlay">
-          <div className="container">
+          <div className="container" dir={i18n.language == "ar" ? "rtl" :"ltr"}>
             <h1 className=" d-block fs-1">
-              Charter Accountat{" "}
-              <span className="text-primary ">& Tax Experts</span>{" "}
+              {t("home.title")}
+              <span className="text-primary " dir={i18n.dir}> {t("home.title2")}</span>{" "}
             </h1>
             <p className="h3 mt-4">
-              general professional partnership of Certified Public Accountants
-              with strong academic credentials and professional experience. Our
-              commitment is not just to provide high-level, impactful, and
-              dependable professional services, but also to promote highly
-              responsive client relationship.
+              {t("home.content")}
             </p>
             <div className="mt-4 d-flex  flex-wrap">
               <Link to={'/user/newRequestService'}
                 className="btn btn-primary rounded-5 me-2 col-lg-2 col-md-3 col-sm-12 mt-3 "
               >
-                Request A Service
+                {t("home.request")}
               </Link>
               <button
                 className="btn btn-outline-primary rounded-5 col-lg-2 col-md-2 col-sm-12 mt-3"
                 type="button"
               >
-                Learn More
+                {t("home.learnMore")}
               </button>
             </div>
           </div>

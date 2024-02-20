@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 const Contact = () => {
   const [t, i18n] = useTranslation();
-
   const [formData, setFormData] = useState({
     name: "",
     title: "",
@@ -14,7 +13,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -58,6 +57,7 @@ const Contact = () => {
         <form
           className="col-9 rounded-4 border m-auto mt-5 p-3 row"
           onSubmit={handleSubmit}
+          dir={i18n.language == "ar" ? "rtl" :"ltr"}
         >
           <div className="col-lg-6 col-md-6 col-sm-12">
             <label htmlFor="Name" className="fw-bold">
@@ -66,7 +66,6 @@ const Contact = () => {
             <input
               className="rounded border form-control mt-2 py-2 "
               type="text"
-              placeholder="full name"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
@@ -79,7 +78,6 @@ const Contact = () => {
             <input
               className="rounded border form-control mt-2 py-2"
               type="text"
-              placeholder="job title"
               name="title"
               value={formData.title}
               onChange={handleInputChange}
@@ -92,7 +90,6 @@ const Contact = () => {
             <input
               type="email"
               className="rounded border form-control mt-2 py-2"
-              placeholder="example@gmail.com"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
@@ -105,7 +102,6 @@ const Contact = () => {
             <input
               className="rounded border form-control mt-2 py-2"
               type="text"
-              placeholder="abour subject"
               name="subject"
               value={formData.subject}
               onChange={handleInputChange}
@@ -118,7 +114,6 @@ const Contact = () => {
             <textarea
               className="form-control rounded border mt-2"
               rows="5"
-              placeholder="enter your message here"
               name="message"
               value={formData.message}
               onChange={handleInputChange}

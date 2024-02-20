@@ -24,9 +24,9 @@ const AboutPage = () => {
             <div className='container w-75' style={{marginTop:"150px"}}>
                 <AboutClient />
             </div>
-            <div className='container w-75' style={{marginTop:"150px"}}>
+            {/* <div className='container w-75' style={{marginTop:"150px"}}>
                 <AboutParteners />
-            </div>
+            </div> */}
         </div>
     )
 }
