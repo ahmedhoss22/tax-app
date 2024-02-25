@@ -22,7 +22,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom border-1 border-primary">
         <div className="container-fluid">
           <Link className="navbar-brand fs-1" to="/">
-            Tax Hub
+            Zero Tax
           </Link>
           <button
             className="navbar-toggler"

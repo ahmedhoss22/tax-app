@@ -6,7 +6,7 @@ function Footer() {
       style={{ width: "100%", minHeight: "265px", backgroundColor: "#0062ff" }}
     >
       <div className="footer-content">
-        <div className="footer-title">TAX HUB</div>
+        <div className="footer-title">Zero Tax</div>
         <div className="line1"></div>
         <div className="links">
           <ul

@@ -15,6 +15,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../Redux/Slice/userSlice";
 import { toast } from "react-toastify";
+import { apiUrl } from "../config/variables";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -43,6 +44,8 @@ const Login = () => {
         toast.error(backendError.error);
       });
   };
+  console.log(apiUrl);
+
   return (
     <div
       className="col-12 d-flex align-items-center justify-content-center"
@@ -57,7 +60,7 @@ const Login = () => {
         }}
       >
         <div className="text-center pt-5">
-          <h4 className=" h41 fw-bold fs-1">Welcome to Tax Hub</h4>
+          <h4 className=" h41 fw-bold fs-1">Welcome to Zero Tax</h4>
         </div>
         <form
           className="m-auto col-11 text-center overflow-hidden"
@@ -136,8 +139,8 @@ const Login = () => {
         </form>
         <div className="m-auto col-10 text-center">
           <h6 className="mt-4 fs-6 h61">Or login with</h6>
-          <h6 className="mt-5 d-flex justify-content-between col-6 col-lg-3  m-auto fs-2 h61">
-            <a href="#" style={{ color: "#9098b1" }}>
+          <h6 className="mt-5 d-flex justify-content-center col-6 col-lg-3  m-auto fs-2 h61">
+            {/* <a href="#" style={{ color: "#9098b1" }}>
               <BsFacebook className="fs-1 text-ww" />
             </a>
             <a href="#" style={{ color: "#9098b1" }}>
@@ -145,9 +148,9 @@ const Login = () => {
             </a>
             <a href="#" style={{ color: "#9098b1" }}>
               <BsLinkedin className="fs-1 text-ww" />
-            </a>
-            <a href="#" style={{ color: "#9098b1" }}>
-              <BsGoogle className="fs-1 text-ww" />
+            </a> */}
+            <a href={apiUrl+"/auth/google/signin"} style={{ color: "#9098b1" }}>
+              <BsGoogle className="fs-1 text-ww" /> oogle
             </a>
           </h6>
         </div>

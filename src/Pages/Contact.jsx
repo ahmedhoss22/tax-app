@@ -13,7 +13,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-  
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -57,7 +57,7 @@ const Contact = () => {
         <form
           className="col-9 rounded-4 border m-auto mt-5 p-3 row"
           onSubmit={handleSubmit}
-          dir={i18n.language == "ar" ? "rtl" :"ltr"}
+          dir={i18n.language == "ar" ? "rtl" : "ltr"}
         >
           <div className="col-lg-6 col-md-6 col-sm-12">
             <label htmlFor="Name" className="fw-bold">
@@ -131,16 +131,45 @@ const Contact = () => {
         </form>
       </section>
       <div className="col-12 rounded mx-auto col-md-11">
-        <iframe
-          className="w-100"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55251.37809418516!2d31.29966389350483!3d30.059482028266938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1702504667011!5m2!1sar!2seg"
-          width="600"
-          height="450"
-          style={{ border: 0 }}
-          // allowfullscreen=""
-          loading="lazy"
-          // referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div className="row justify-content-between">
+          <iframe className="col m-1" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3455.555816220557!2d31.227053075551854!3d29.99219287494996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDU5JzMxLjkiTiAzMcKwMTMnNDYuNyJF!5e0!3m2!1sen!2seg!4v1708893147025!5m2!1sen!2seg" width="600" height="450" style={{ border: "0" ,borderRadius:"6px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe className="col m-1" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3455.555816220557!2d31.227053075551854!3d29.99219287494996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDU5JzMxLjkiTiAzMcKwMTMnNDYuNyJF!5e0!3m2!1sen!2seg!4v1708893147025!5m2!1sen!2seg" width="600" height="450" style={{ border: "0" ,borderRadius:"6px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <section className="col-10 mx-auto mb-5  ">
+        <div className="row d-flex justify-content-around cardMap">
+          <div className="col-lg-3 bg-light  col-md-5 col-10 p-3 rounded-4 border border-primary text-center mt-3">
+            <i
+              className="fs-1 fas fa-phone my-4"
+              style={{ color: "#0062FF" }}
+            />
+            <h4 className="my-3">{t("phone")}</h4>
+            <h6 className="mt-2">020225254487</h6>
+          </div>
+          <div className="col-lg-3 bg-light  col-md-5 col-10 p-3 rounded-4 border border-primary text-center mt-3">
+            <i
+              className="fs-1 fas fa-envelope my-4"
+              style={{ color: "#0062FF" }}
+            />
+            <h4 className="my-3">{t("email")}</h4>
+            <h6 className="mt-3">info@kbs.com.eg</h6>
+          </div>
+          <div className="col-lg-3 bg-light  col-md-5 col-10 p-3 rounded-4 border border-primary text-center mt-3">
+            <i
+              className="fs-1 fas fa-tenge my-4"
+              style={{ color: "#0062FF" }}
+            />
+            <h4 className="my-3">offices</h4>
+            <h6 className="my-3"> - {t("address")} </h6>
+            <h6 className="my-3">- {t("address2")}</h6>
+          </div>
+        </div>
+      </section>
+
+    <h2 className="text-center mb-4 font-blold">Oman branch </h2>
+      <div className="col-12 rounded mx-auto col-md-11">
+        <div className="row justify-content-between">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14624.80173626746!2d58.36568355!3d23.597143600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8e00101fe9fd31%3A0x3436eb891218a6ff!2z2KfZhNi52LDZitio2Kkg2KfZhNi02YXYp9mE2YrYqdiMINmF2LPZgti32Iwg2LnZhdin2YY!5e0!3m2!1sar!2seg!4v1708894525834!5m2!1sar!2seg" width="600" height="450" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>       </div>
       </div>
       <section className="col-10 mx-auto mb-5  ">
         <div className="row d-flex justify-content-around cardMap">
@@ -166,11 +195,11 @@ const Contact = () => {
               style={{ color: "#0062FF" }}
             />
             <h4 className="my-3">{t("Office")}</h4>
-            <h6 className="my-3">{t("address")}</h6>
+            <h6 className="my-3">{t("address3")}</h6>
           </div>
         </div>
       </section>
-      <EBlog />
+      {/* <EBlog /> */}
     </div>
   );
 };
